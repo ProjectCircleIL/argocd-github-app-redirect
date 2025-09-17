@@ -12,14 +12,14 @@
     </style>
 </head>
 <body>
-    <h1>✅ GitHub App Created Successfully!</h1>
+    <h1>GitHub App Created Successfully!</h1>
     
     <div class="success">
         Your GitHub App has been created successfully in your organization.
     </div>
 
     <div class="instructions">
-        <h3>📋 Next Steps:</h3>
+        <h3>Next Steps:</h3>
         <ol>
             <li><strong>Go to your organization's GitHub Apps:</strong><br>
                 <a href="" id="appsLink" target="_blank">https://github.com/organizations/{your-org}/settings/apps</a>
@@ -30,9 +30,9 @@
     </div>
 
     <div class="instructions">
-        <h3>🔧 Store Credentials in Secrets Manager:</h3>
+        <h3>Store Credentials in Secrets Manager:</h3>
         
-        <h4>📦 AWS Secrets Manager:</h4>
+        <h4>AWS Secrets Manager:</h4>
         <p><strong>Secret 1: <code>argocd/githubapp</code></strong> (Plain text)</p>
         <ul>
             <li>Store the <strong>Private Key</strong> as plain text</li>
@@ -46,7 +46,7 @@
             <li><code>client_id</code> → <span id="awsClientId" style="font-family: monospace;">[Client ID will appear here]</span></li>
         </ul>
         
-        <h4>🔷 GCP Secret Manager:</h4>
+        <h4>GCP Secret Manager:</h4>
         <p><strong>Secret 1: <code>githubapp_secret_id</code></strong></p>
         <ul>
             <li>Store the <strong>Private Key</strong> as the secret value</li>
@@ -69,10 +69,10 @@
 
     <div id="exchangeSection" style="display:none;">
         <div id="appDetails" style="display:none;">
-            <h4>🔐 Private Key:</h4>
+            <h4>Private Key:</h4>
             <textarea id="privateKey" style="width: 100%; height: 200px; font-family: monospace;" readonly placeholder="Private key will appear here..."></textarea>
-            <button onclick="copyKey()">📋 Copy Private Key</button>
-            <button onclick="downloadKey()">💾 Download Private Key</button>
+            <button onclick="copyKey()">Copy Private Key</button>
+            <button onclick="downloadKey()">Download Private Key</button>
         </div>
     </div>
 
@@ -124,7 +124,7 @@
             } catch (error) {
                 console.error('Error exchanging code:', error);
                 document.getElementById('exchangeSection').innerHTML = 
-                    '<h3>⚠️ Manual Setup Required</h3><p>Could not automatically complete setup. Please check your GitHub Apps manually.</p>';
+                    '<h3>Manual Setup Required</h3><p>Could not automatically complete setup. Please check your GitHub Apps manually.</p>';
             }
         }
         
@@ -133,7 +133,7 @@
             navigator.clipboard.writeText(key).then(() => {
                 const btn = document.querySelector('button[onclick="copyKey()"]');
                 const originalText = btn.textContent;
-                btn.textContent = '✅ Copied!';
+                btn.textContent = 'Copied!';
                 btn.style.background = '#28a745';
                 setTimeout(() => {
                     btn.textContent = originalText;

@@ -38,7 +38,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>🚀 ArgoCD GitHub App Generator</h1>
+        <h1>ArgoCD GitHub App Generator</h1>
         <p>Generate a URL that creates a pre-configured ArgoCD GitHub App in any organization.</p>
     </div>
 
@@ -60,19 +60,19 @@
         <small>The domain where ArgoCD is hosted (without https://)</small>
     </div>
 
-    <button onclick="generateManifest()">🎯 Generate GitHub App</button>
+    <button onclick="generateManifest()">Generate GitHub App</button>
 
     <div id="result" class="result" style="display:none;">
-        <h3>📋 Review the manifest and click on create:</h3>
+        <h3>Review the manifest and click on create:</h3>
         <form id="manifestForm" method="post" action="" target="_blank">
             <textarea name="manifest" id="manifestTextarea" style="width: 100%; height: 200px; font-family: monospace; font-size: 12px; margin: 10px 0;"></textarea>
             <br>
-            <input type="submit" value="🚀 Create GitHub App" style="background: #28a745; color: white; padding: 15px 30px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; width: 100%;">
+            <input type="submit" value="Create GitHub App" style="background: #28a745; color: white; padding: 15px 30px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; width: 100%;"
         </form>
 
 
         <div class="permissions">
-            <h4>🔐 App will be created with these permissions:</h4>
+            <h4>App will be created with these permissions:</h4>
             <ul>
                 <li><strong>Actions:</strong> Read and write</li>
                 <li><strong>Administration:</strong> Read and write</li>
@@ -125,7 +125,8 @@
                     "organization_secrets": "read",
                     "secrets": "read",
                     "statuses": "read",
-                    "workflows": "write"
+                    "workflows": "write",
+                    "email_addresses": "read"
                 },
                 "default_events": []
             };
